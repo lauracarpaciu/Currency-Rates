@@ -1,9 +1,4 @@
 package laura.bnr;
-
-import laura.bnr.ConsolePrinter;
-import laura.bnr.Currency;
-import laura.bnr.FilePrinter;
-
 import java.util.ArrayList;
 
 
@@ -22,11 +17,14 @@ public class Main {
         } catch (Exception e) {
             e.getMessage();
         }
-
-
+// print the result in console
         System.out.println(xmlString);
+//------------------------------------------------------------------//
 
-        ArrayList<Currency> currencies = parseXMLString("INPUT");
+//        create a table with an ArrayList class
+
+
+ArrayList<Currency> currencies = parseXMLString("INPUT");
 
         Currency usdCurrency = new Currency("N/A", 0.0);
         Currency eurCurrency = new Currency("N/A", 0.0);
@@ -45,7 +43,7 @@ public class Main {
         filePrinter.print(currencies);
     }
 
-
+// cerate a table , and add object on the table;
     public static ArrayList<Currency> parseXMLString(String input) {
         ArrayList<Currency> currencies = new ArrayList<Currency>();
         currencies.add(new Currency("EUR", 4.5340));
