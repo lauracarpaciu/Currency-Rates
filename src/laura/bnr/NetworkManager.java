@@ -13,15 +13,11 @@ public class NetworkManager {
 
     public String getXMLString(String url) throws MalformedURLException, ProtocolException, IOException {
         //Code to make a webservice HTTP request
-
         URL newurl = new URL(url);
         HttpURLConnection con = (HttpURLConnection) newurl.openConnection();
-
         con.setRequestMethod("GET");
         //Read the response.
-
         StringBuilder content;
-
         try (BufferedReader in = new BufferedReader(
                 new InputStreamReader(con.getInputStream()))) {
             // Write the HTTP message response to a String.
@@ -30,7 +26,6 @@ public class NetworkManager {
 
             while ((line = in.readLine()) != null) {
                 content.append(line);
-
             }
         }
 
