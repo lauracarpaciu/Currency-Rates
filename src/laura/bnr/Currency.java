@@ -11,7 +11,7 @@ public class Currency {
         this.rateRON = rateRON;
     }
 
-    // create a getter Method
+    // create a get Method
     public String getDescription() {
         return String.format("%s: %s", currencyName, Double.toString(rateRON));
     }

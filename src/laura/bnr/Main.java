@@ -1,4 +1,5 @@
 package laura.bnr;
+
 import java.util.ArrayList;
 
 
@@ -17,15 +18,11 @@ public class Main {
         } catch (Exception e) {
             e.getMessage();
         }
-// print the result in console
+// Print the output on console
         System.out.println(xmlString);
 //------------------------------------------------------------------//
 
-//        create an array with an ArrayList class
-
-
-ArrayList<Currency> currencies = parseXMLString("INPUT");
-
+        ArrayList<Currency> currencies = parseXMLString("INPUT");
         Currency usdCurrency = new Currency("N/A", 0.0);
         Currency eurCurrency = new Currency("N/A", 0.0);
 
@@ -34,8 +31,9 @@ ArrayList<Currency> currencies = parseXMLString("INPUT");
             if (currency.currencyName == "EUR") eurCurrency = currency;
         }
 
-        printConversion(100.0, usdCurrency, eurCurrency );
-//create objects: consolePrinter and filePrinter; and call print method  on main class
+        printConversion(100.0, usdCurrency, eurCurrency);
+
+//create objects: consolePrinter and filePrinter; and call print method
         ConsolePrinter consolePrinter = new ConsolePrinter();
         consolePrinter.print(currencies);
 
@@ -43,7 +41,7 @@ ArrayList<Currency> currencies = parseXMLString("INPUT");
         filePrinter.print(currencies);
     }
 
-// create an array , and populate this with objects;
+    // create an array , and populate this with objects;
     public static ArrayList<Currency> parseXMLString(String input) {
         ArrayList<Currency> currencies = new ArrayList<Currency>();
         currencies.add(new Currency("EUR", 4.5340));
@@ -52,7 +50,7 @@ ArrayList<Currency> currencies = parseXMLString("INPUT");
         return currencies;
     }
 
-//    create method for currency conversion , and call this method on main class
+    //    create method for currency conversion , and call this method on main method
     public static void printConversion(Double units, Currency fromCurrency, Currency toCurrency) {
         Double rate = fromCurrency.rateRON / toCurrency.rateRON;
 

@@ -16,19 +16,19 @@ public class NetworkManager {
         URL newurl = new URL(url);
         HttpURLConnection con = (HttpURLConnection) newurl.openConnection();
         con.setRequestMethod("GET");
+
         //Read the response.
-        StringBuilder content;
-        try (BufferedReader in = new BufferedReader(
+        try (BufferedReader br = new BufferedReader(
                 new InputStreamReader(con.getInputStream()))) {
             // Write the HTTP message response to a String.
             String line;
-            content = new StringBuilder();
+            StringBuilder content = new StringBuilder();
 
-            while ((line = in.readLine()) != null) {
+            while ((line = br.readLine()) != null) {
                 content.append(line);
             }
-        }
+            return content.toString();
 
-        return content.toString();
+        }
     }
 }
