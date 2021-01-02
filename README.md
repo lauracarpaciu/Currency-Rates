@@ -4,13 +4,12 @@ The main purpose of the app is to have currency rates based on xml String.
 
 Efficient way to have currency rates based on xml String:
 
-•	1 - Create a method, that take the xml and return a dictionary (Currency, Rate)
+•	1 - Code to make a webservice HTTP request
 
-•	2 - Create a method, that take the string price(euro.Text) and Rate
+•	2 - Write the HTTP message response to a String.
 
-•	3 - Calling methods in calculateCurrencies_Click, like 
+•	3 - Create an inteface to be implemented on File Printer & Console Printer Class
 
-•	4 – Test
+•	4 – Print the output on console
 
-•	5 - Result
 
